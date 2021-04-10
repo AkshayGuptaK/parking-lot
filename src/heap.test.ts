@@ -10,6 +10,11 @@ describe('Heap', () => {
     expect(heap.removeItem()).toBeNull();
   });
 
+  it('should return false when empty and asked if contains items', () => {
+    const heap = new Heap<number>(compareNumbers);
+    expect(heap.hasItem()).toBe(false);
+  });
+
   it('should return added item when only one item is contained', () => {
     const heap = new Heap<number>(compareNumbers);
     heap.add(5);
@@ -21,6 +26,7 @@ describe('Heap', () => {
     heap.add(3);
     heap.removeItem();
     expect(heap.removeItem()).toBeNull();
+    expect(heap.hasItem()).toBe(false);
   });
 
   it('should return smallest item when multiple items are contained', () => {
@@ -43,5 +49,6 @@ describe('Heap', () => {
     expect(heap.removeItem()).toBe(5);
     expect(heap.removeItem()).toBe(5);
     expect(heap.removeItem()).toBe(7);
+    expect(heap.hasItem()).toBe(false);
   });
 });
