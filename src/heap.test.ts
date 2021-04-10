@@ -1,7 +1,7 @@
 import Heap from './heap';
 
 function compareNumbers(firstNumber: number, secondNumber: number) {
-  return firstNumber <= secondNumber ? firstNumber : secondNumber;
+  return firstNumber <= secondNumber;
 }
 
 describe('Heap', () => {
