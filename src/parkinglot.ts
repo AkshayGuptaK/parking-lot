@@ -1,9 +1,9 @@
 import autoBind from 'auto-bind';
 import Heap from './heap';
 
-type RegistrationNumber = string;
-type Color = string;
-type ParkingSlot = number;
+export type RegistrationNumber = string;
+export type Color = string;
+export type ParkingSlot = number;
 
 interface Booking {
   slot: ParkingSlot;
